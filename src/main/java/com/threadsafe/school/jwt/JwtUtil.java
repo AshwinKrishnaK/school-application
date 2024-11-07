@@ -34,7 +34,6 @@ public class JwtUtil {
      * */
     public String getJwtFromHeader(HttpServletRequest httpServletRequest){
         String bearerToken = httpServletRequest.getHeader("Authorization");
-        log.info("Bearer Token is {}", bearerToken);
         if(bearerToken != null && bearerToken.startsWith("Bearer ")){
             return bearerToken.substring(7);
         }

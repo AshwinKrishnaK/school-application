@@ -28,9 +28,9 @@ public class BasicController {
     }
 
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
-    @GetMapping("/hello")
+    @GetMapping("/home")
     public String hello(){
-        return "hello";
+        return "home page";
     }
 
     @PreAuthorize("hasRole('ADMIN')")
