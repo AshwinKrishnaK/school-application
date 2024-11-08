@@ -1,6 +1,6 @@
 package com.threadsafe.school.repo;
 
-import com.example.student.model.SchoolClass;
+import com.threadsafe.school.model.SchoolClass;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
