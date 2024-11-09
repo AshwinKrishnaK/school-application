@@ -1,13 +1,15 @@
 package com.threadsafe.school.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Set;
 
 @Entity
 @Table(name = "class")
-@Data
+@Getter
+@Setter
 public class SchoolClass extends BaseEntity{
 
     @Id
@@ -16,6 +18,6 @@ public class SchoolClass extends BaseEntity{
     private String name;
 
     @OneToMany(mappedBy = "schoolClass",fetch = FetchType.LAZY,
-            cascade = CascadeType.PERSIST, targetEntity = Student.class)
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity = Student.class)
     private Set<Student> students;
 }
