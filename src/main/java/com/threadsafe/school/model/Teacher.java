@@ -21,7 +21,7 @@ public class Teacher extends BaseEntity{
     private User user;
 
     @OneToOne(fetch = FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity = Address.class)
-    @JoinColumn(name = "address_id", referencedColumnName = "addressId", nullable = true)
+    @JoinColumn(name = "address_id", referencedColumnName = "addressId")
     private Address address;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
