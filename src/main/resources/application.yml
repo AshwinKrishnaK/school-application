@@ -15,3 +15,9 @@ jwt:
   secret: 7cac7ba087984842c676b23d1e669502cec0629cd9d20de9eb7fbbf85a344a96
   expire:
     time: 300000000
+
+server:
+  port: 8082
+  servlet:
+    context-path: /school/api
+
